@@ -1,5 +1,4 @@
-
-FROM node
+FROM node:14.15-stretch
 
 ENV PL_PWA_PORT=8080
 ENV PL_PWA_DIR=/pwa
