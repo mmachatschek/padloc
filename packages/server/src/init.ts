@@ -20,7 +20,7 @@ async function init() {
         accountQuota: {
             items: -1,
             storage: 1,
-            orgs: 5
+            orgs: 100
         },
         orgQuota: {
             members: -1,

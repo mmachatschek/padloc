@@ -572,7 +572,7 @@ export class Controller extends API {
         const existingOrgs = await Promise.all(account.orgs.map(({ id }) => this.storage.get(Org, id)));
         const ownedOrgs = existingOrgs.filter(o => o.owner === account.id);
 
-        if (account.quota.orgs !== -1 && ownedOrgs.length >= account.quota.orgs) {
+        if (account.quota.orgs !== -1 && ownedOrgs.length >= 100) {
             throw new Err(
                 ErrorCode.ORG_QUOTA_EXCEEDED,
                 "You have reached the maximum number of organizations for this account!"
